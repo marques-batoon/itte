@@ -1,0 +1,38 @@
+.kanjiContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.kanjiContainer .kanji {
+  font-size: 3em;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.d-none {
+  display: none;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.center button {
+  margin: 0.5em 0;
+}
+
+.imi {
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+.footerDivider {
+  margin-top: 3em;
+}
+
