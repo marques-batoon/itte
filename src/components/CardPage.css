@@ -1,0 +1,451 @@
+.card-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+  position: relative;
+}
+
+/* Back Button */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 16px 0;
+  background: none;
+  border: 1.5px solid rgba(184,134,11,0.3);
+  color: var(--ink-light);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  align-self: flex-start;
+}
+
+.back-btn:hover {
+  border-color: var(--red);
+  color: var(--red);
+  background: rgba(192,57,43,0.05);
+}
+
+.back-label {
+  font-family: var(--font-jp);
+  font-size: 0.85rem;
+}
+
+/* Card Header */
+.card-header {
+  text-align: center;
+  padding: 16px 16px 24px;
+  animation: fadeInUp 0.4s ease both;
+  position: relative;
+}
+
+.card-header::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, var(--red-dark), var(--red));
+  border-radius: 2px;
+}
+
+.card-id-badge {
+  display: inline-block;
+  background: var(--paper-warm);
+  border: 1px solid rgba(184,134,11,0.3);
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  font-size: clamp(2.5rem, 10vw, 4rem);
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+
+.card-romaji {
+  font-size: 1.1rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.2em;
+  margin-bottom: 6px;
+}
+
+.card-meaning {
+  font-size: 0.85rem;
+  color: var(--accent-blue);
+  font-style: italic;
+  max-width: 320px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Descriptions */
+.descriptions-container {
+  background: var(--paper-card);
+  border: 1.5px solid rgba(184,134,11,0.2);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 24px 0 16px;
+  box-shadow: var(--shadow-soft);
+  animation: fadeInUp 0.4s ease 0.1s both;
+}
+
+.desc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: linear-gradient(to right, var(--paper-warm), var(--paper-card));
+  border-bottom: 1px solid rgba(184,134,11,0.15);
+  font-size: 0.85rem;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.desc-hint {
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+  font-weight: 400;
+}
+
+.descriptions-list {
+  list-style: none;
+}
+
+.desc-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(184,134,11,0.1);
+  transition: background 0.2s;
+  position: relative;
+}
+
+.desc-item:last-child { border-bottom: none; }
+
+.desc-item--active {
+  background: linear-gradient(to right, rgba(192,57,43,0.06), transparent);
+  border-left: 3px solid var(--red);
+}
+
+.desc-letter {
+  width: 30px;
+  height: 30px;
+  background: var(--paper-warm);
+  border: 1.5px solid rgba(184,134,11,0.3);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.desc-item--active .desc-letter {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+
+.desc-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.desc-word {
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+  padding: 2px 6px;
+  margin-left: -6px;
+  border-radius: 4px;
+  transition: background 0.15s, color 0.15s;
+  position: relative;
+  display: inline-block;
+  line-height: 2.2;
+}
+
+
+
+.desc-word:hover {
+  background: rgba(192,57,43,0.08);
+  color: var(--red);
+}
+
+
+
+/* desc-romaji removed â€” using furigana */
+
+.active-marker {
+  font-size: 0.8rem;
+  color: var(--red);
+  font-weight: 700;
+  white-space: nowrap;
+  animation: slideInRight 0.3s ease;
+}
+
+/* Actions */
+.actions-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeInUp 0.4s ease 0.2s both;
+}
+
+.action-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  text-align: left;
+  position: relative;
+}
+
+.action-btn:hover { transform: translateY(-1px); }
+.action-btn:active { transform: translateY(0); }
+
+.action-btn--primary {
+  background: linear-gradient(135deg, var(--red-dark), var(--red));
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(192,57,43,0.3);
+}
+
+.action-btn--primary:hover {
+  box-shadow: 0 6px 22px rgba(192,57,43,0.4);
+}
+
+.action-btn--secondary {
+  background: var(--paper-card);
+  color: var(--ink);
+  border: 1.5px solid rgba(184,134,11,0.3);
+  box-shadow: var(--shadow-soft);
+}
+
+.action-btn--secondary:hover {
+  border-color: var(--gold);
+}
+
+.action-btn--open {
+  border-color: var(--gold);
+  background: var(--paper-warm);
+}
+
+.action-icon { font-size: 1.4rem; flex-shrink: 0; }
+
+.action-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.action-jp { font-size: 1rem; font-weight: 700; }
+.action-en { font-size: 0.75rem; opacity: 0.75; letter-spacing: 0.05em; }
+
+.chevron {
+  font-size: 0.7rem;
+  color: var(--gold);
+  transition: transform 0.2s;
+}
+
+/* Letter Panel */
+.letter-panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  background: var(--paper-card);
+  border: 1.5px solid rgba(184,134,11,0.25);
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: var(--shadow-soft);
+  animation: fadeInUp 0.2s ease;
+}
+
+.letter-pick-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 8px;
+  background: var(--paper);
+  border: 1.5px solid rgba(184,134,11,0.2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: center;
+}
+
+.letter-pick-btn:hover {
+  border-color: var(--gold);
+  background: var(--paper-warm);
+  transform: translateY(-2px);
+}
+
+.letter-pick-btn--selected {
+  background: var(--red);
+  border-color: var(--red-dark);
+  box-shadow: 0 3px 12px rgba(192,57,43,0.3);
+}
+
+.letter-pick-btn--selected .letter-pick-label,
+.letter-pick-btn--selected .letter-pick-jp {
+  color: #fff;
+}
+
+.letter-pick-label {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.letter-pick-jp {
+  font-size: 0.7rem;
+  color: var(--ink-light);
+  line-height: 1.2;
+}
+
+/* Assigned Display */
+.assigned-display {
+  margin-top: 20px;
+  opacity: 0;
+  transform: scale(0.95) translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  animation: none;
+}
+
+.assigned-display--revealed {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.assigned-inner {
+  background: linear-gradient(160deg, var(--paper-card) 0%, var(--paper-warm) 100%);
+  border: 2px solid rgba(192,57,43,0.3);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 6px 30px rgba(192,57,43,0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.assigned-inner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--red-dark), var(--red));
+}
+
+.assigned-label {
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.assigned-letter {
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--red);
+  line-height: 1;
+  margin-bottom: 8px;
+  text-shadow: 2px 2px 0 rgba(192,57,43,0.15);
+  animation: stamp 0.4s ease;
+}
+
+.assigned-word {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.assigned-romaji {
+  font-size: 0.9rem;
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+}
+
+.assigned-meaning {
+  font-size: 0.85rem;
+  color: var(--accent-blue);
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+.assigned-instruction {
+  font-size: 0.83rem;
+  color: var(--ink-light);
+  background: rgba(184,134,11,0.08);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  line-height: 1.6;
+  border-left: 3px solid var(--gold);
+  text-align: left;
+}
+
+/* Furigana in letter picker */
+.letter-pick-furigana {
+  font-size: 0.72rem;
+  line-height: 2;
+  text-align: center;
+  color: var(--ink-light);
+}
+
+.letter-pick-btn--selected .letter-pick-furigana {
+  color: rgba(255,255,255,0.85);
+}
+
+/* Card title furigana override â€” bigger rt */
+.card-title-furigana .furigana-rt {
+  font-size: 0.38em;
+  color: var(--gold);
+}
+
+.card-title-furigana {
+  line-height: 2.2;
+}
+
+/* Assigned word furigana */
+.assigned-word {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 4px;
+  line-height: 2.4;
+}

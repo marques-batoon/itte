@@ -1,0 +1,31 @@
+.furigana-root {
+  font-family: var(--font-jp);
+  line-height: 2.2;  /* extra line-height to make room for ruby above */
+}
+
+.furigana-ruby {
+  display: inline ruby;
+  ruby-position: over;
+}
+
+.furigana-rt {
+  font-size: 0.5em;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  font-family: var(--font-jp);
+  font-weight: 500;
+  text-align: center;
+}
+
+.furigana-plain {
+  display: inline;
+}
+
+/* Larger variant used on the assigned-display card */
+.furigana-root.furigana-lg {
+  line-height: 2.4;
+}
+
+.furigana-lg .furigana-rt {
+  font-size: 0.45em;
+}
