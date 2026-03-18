@@ -162,7 +162,7 @@ export const CARDS = [
     id: 10,
     title: "大丈夫",
     titleRomaji: "daijoubu",
-    titleFurigana: "大丈夫",
+    titleFurigana: "だいじょうぶ",
     titleMeaning: "",
     descriptions: [
       { letter: "A", segments: [{ k: "安", f: "あん" }, { k: "心", f: "しん" }, { k:"させるときの「大丈夫」" }, ], meaning: "" },
