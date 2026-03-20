@@ -146,7 +146,7 @@ export default function HomePage({ onSelectCard }) {
               <option value="">— Choose a card —</option>
               {CARDS.map((card) => (
                 <option key={card.id} value={card.id}>
-                  #{card.id} — {card.title}
+                  #{card.id} : {card.title}
                 </option>
               ))}
             </select>
