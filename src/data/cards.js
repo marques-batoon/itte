@@ -175,6 +175,23 @@ export const CARDS = [
       { letter: "H", segments: [{ k: "大丈夫じゃないときの「大丈夫」" }], meaning: "" },
     ],
   },
+  {
+    id: 11,
+    title: "鼻を使って",
+    titleRomaji: "hana o tsukatte",
+    titleFurigana: "はな　を　つかって",
+    titleMeaning: "表情のみ",
+    descriptions: [
+      { letter: "A", segments: [{ k: "くさいぞ、の" }, { k: "鼻", f: "はな" }, ], meaning: "" },
+      { letter: "B", segments: [{ k: "いい" }, { k: "香", f: "かお" }, { k: "り〜、の" }, { k: "鼻", f: "はな" }], meaning: "" },
+      { letter: "C", segments: [{ k: "くしゃみが" }, { k: "出", f: "で" }, { k: "る" }, { k: "直", f: "ちょく" }, { k: "前", f: "ぜん" }, { k: "の" }, { k: "鼻", f: "はな" }], meaning: "" },
+      { letter: "D", segments: [{ k: "ガスもれ？の" }, { k: "鼻", f: "はな" }], meaning: "" },
+      { letter: "E", segments: [{ k: "ふんがー！の" }, { k: "鼻", f: "はな" }], meaning: "" },
+      { letter: "F", segments: [{ k: "泣", f: "な" }, { k: "いているときの" }, { k: "鼻", f: "はな" }], meaning: "" },
+      { letter: "G", segments: [{ k: "自", f: "じ" }, { k: "慢", f: "まん" }, { k: "げなときの" }, { k: "鼻", f: "はな" },], meaning: "" },
+      { letter: "H", segments: [{ k: "ムズムズしている" }, { k: "鼻", f: "はな" }], meaning: "" },
+    ],
+  },
   /*
   {
     id: 1,
@@ -285,6 +302,14 @@ export const TRANSLATIONS = {
   "詐欺師が言う「大丈夫」": { en: "as a con-man", zh: "骗子说的话" },
   "ビックリして「大丈夫」": { en: "surprised", zh: "大吃一惊" },
   "大丈夫じゃないときの「大丈夫」": { en: "you say you are daijoubu but you're not really daijoubu", zh: "不舒服的时候" },
+  "くさいぞ、の鼻": { en: "something stinks", zh: "太臭了" },
+  "いい香り〜、の鼻": { en: "something smells good", zh: "好闻" },
+  "くしゃみが出る直前の鼻": { en: "about to sneeze", zh: "鼻子发痒要打喷嚏" },
+  "ガスもれ？の鼻": { en: "gas leak?", zh: "煤气泄漏了吗？" },
+  "ふんがー！の鼻": { en: "Grrr!", zh: "哼！" },
+  "泣いているときの鼻": { en: "crying", zh: "在哭" },
+  "自慢げなときの鼻": { en: "bragging; conceited", zh: "得意的时候" },
+  "ムズムズしている鼻": { en: "itchy nose", zh: "鼻子痒痒的" },
   //"": { en: "", zh: "" },
 };
 
