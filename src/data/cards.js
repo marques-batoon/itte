@@ -145,7 +145,7 @@ export const CARDS = [
     id: 9,
     title: "寝顔",
     titleRomaji: "negao",
-    titleFurigana: "寝顔",
+    titleFurigana: "ねがお",
     titleMeaning: "表情のみ",
     descriptions: [
       { letter: "A", segments: [{ k: "大", f: "だい" }, { k: "好", f: "こう" }, { k: "物", f: "ぶつ" }, { k:"を" }, { k: "食", f: "た" }, { k:"べる" }, { k: "夢", f: "ゆめ" }, { k:"の" }　, { k: "寝", f: "ね" }, { k: "顔", f: "がお" }], meaning: "" },
