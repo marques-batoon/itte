@@ -192,6 +192,23 @@ export const CARDS = [
       { letter: "H", segments: [{ k: "ムズムズしている" }, { k: "鼻", f: "はな" }], meaning: "" },
     ],
   },
+  {
+    id: 12,
+    title: "自己紹介",
+    titleRomaji: "jiko shoukai",
+    titleFurigana: "じこ　しょうかい",
+    titleMeaning: "【　】に自分の名前",
+    descriptions: [
+      { letter: "A", segments: [{ k: "ヒーロー" },　{ k: "風", f: "ふう" }, { k: "に" },　{ k: "「【名前】です」" },], meaning: "" },
+      { letter: "B", segments: [{ k: "セクシーに「【名前】です」" }], meaning: "" },
+      { letter: "C", segments: [{ k: "悪", f: "あく" }, { k: "役", f: "やく" }, { k: "っぽく「【名前】です」" }], meaning: "" },
+      { letter: "D", segments: [{ k: "天", f: "てん" }, { k: "才", f: "さい" }, { k: "っぽく「【名前】です」" }], meaning: "" },
+      { letter: "E", segments: [{ k: "クールに「【名前】です」" }], meaning: "" },
+      { letter: "F", segments: [{ k: "怪", f: "かい" }, { k: "力", f: "りき" }, { k: "男", f: "おとこ" }, { k: "で「【名前】です」" }], meaning: "" },
+      { letter: "G", segments: [{ k: "超", f: "ちょう" }, { k: "美", f: "び" }, { k: "形", f: "けい" }, { k: "で「【名前】です」" }], meaning: "" },
+      { letter: "H", segments: [{ k: "ふつうに「【名前】です」" }], meaning: "" },
+    ],
+  },
   /*
   {
     id: 1,
@@ -310,6 +327,14 @@ export const TRANSLATIONS = {
   "泣いているときの鼻": { en: "crying", zh: "在哭" },
   "自慢げなときの鼻": { en: "bragging; conceited", zh: "得意的时候" },
   "ムズムズしている鼻": { en: "itchy nose", zh: "鼻子痒痒的" },
+  "ヒーロー風に「【名前】です」": { en: "like a hero", zh: "英雄般地" },
+  "セクシーに「【名前】です」": { en: "in a sexy way", zh: "性感地" },
+  "悪役っぽく「【名前】です」": { en: "like a villain", zh: "反派味" },
+  "天才っぽく「【名前】です」": { en: "like a genius", zh: "很有天才的感觉" },
+  "クールに「【名前】です」": { en: "in a cool way", zh: "酷" },
+  "怪力男で「【名前】です」": { en: "As a muscleman/powerbuilder", zh: "怪力男 " },
+  "超美形で「【名前】です」": { en: "As if you were very beautiful", zh: "高颜值" },
+  "ふつうに「【名前】です」": { en: "normally", zh: "一般" },
   //"": { en: "", zh: "" },
 };
 
